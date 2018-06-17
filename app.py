@@ -18,7 +18,7 @@ api.add_resource(timecapsule_api.TimeCapsuleEventApi, timecapsule_url + '/event'
 
 @app.route('/')
 def index():
-    return render_template('sample_api_load.html')
+    return render_template('index.html')
 
 
 @app.route('/registration')
