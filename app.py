@@ -31,5 +31,15 @@ def reservation():
     return render_template('HtmlPage02.html')
 
 
+@app.route('/registration/thanks')
+def registration_thanks():
+    return render_template('thanks01.html')
+
+
+@app.route('/reservation/thanks')
+def reservation_thanks():
+    return render_template('thanks02.html')
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
