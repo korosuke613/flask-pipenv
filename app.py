@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from flask_restful import Api
 from apis import hello_world, todo, version, timecapsule_api
 
@@ -14,6 +14,11 @@ api.add_resource(timecapsule_api.TimeCapsuleUserApi, timecapsule_url + '/user')
 api.add_resource(timecapsule_api.TimeCapsuleUserEventApi, timecapsule_url + '/event/<string:user_id>')
 api.add_resource(timecapsule_api.TimeCapsuleUserDetailApi, timecapsule_url + '/user/<string:user_id>')
 api.add_resource(timecapsule_api.TimeCapsuleEventApi, timecapsule_url + '/event')
+
+
+@app.route('/')
+def index():
+    return render_template('sample_api_load.html')
 
 
 if __name__ == '__main__':

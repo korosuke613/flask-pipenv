@@ -4,7 +4,7 @@ $(function () {
     $('#execute').click(function () {
         // Ajax通信を開始する
         $.ajax({
-            url: 'http://127.0.0.1:5000/api/timecapsule/user',
+            url: 'http://ec2-13-113-63-24.ap-northeast-1.compute.amazonaws.com:5000/api/timecapsule/user',
             type: 'post', // getかpostを指定(デフォルトは前者)
             //dataType: 'json', // 「json」を指定するとresponseがJSONとしてパースされたオブジェクトになる
             data: { // 送信データを指定(getの場合は自動的にurlの後ろにクエリとして付加される)
