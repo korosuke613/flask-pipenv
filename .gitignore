@@ -105,3 +105,6 @@ venv.bak/
 
 .idea/
 *.pem.txt
+*.sqlite
+*.asta*
+*.bak
