@@ -39,6 +39,7 @@ $(function () {
                 $('#result').val('成功');
 
                 $('#detail').val(response.message);
+                window.location.href = '/registration/thanks'; // 通常の遷移
 
             })
 
