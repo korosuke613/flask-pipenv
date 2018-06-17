@@ -21,5 +21,15 @@ def index():
     return render_template('sample_api_load.html')
 
 
+@app.route('/registration')
+def registration():
+    return render_template('HtmlPage01.html')
+
+
+@app.route('/reservation')
+def reservation():
+    return render_template('HtmlPage02.html')
+
+
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=5000, debug=True)
