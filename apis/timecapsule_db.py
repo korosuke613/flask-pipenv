@@ -36,9 +36,9 @@ class TimeCapsule:
             sql = 'select * from events where user_id = ?'
             events = []
             for row in c.execute(sql, (user_id,)):
-                events.append(row)
-
-            return {'events': events}
+                events.append({'event_id': row[0], 'user_id': row[1],
+                               'delivery_date': row[2], 'info': row[3]})
+            return events
 
     def get_user(self, user_id):
         with closing(sqlite3.connect(dbname)) as conn:
