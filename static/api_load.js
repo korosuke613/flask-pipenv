@@ -10,7 +10,7 @@ $(function () {
 
         $.ajax({
 
-            url: 'http://ec2-13-113-63-24.ap-northeast-1.compute.amazonaws.com:5000/api/timecapsule/user',
+            url: 'http://ec2-13-113-63-24.ap-northeast-1.compute.amazonaws.com/api/timecapsule/user',
 
             type: 'post', // getかpostを指定(デフォルトは前者)
 
