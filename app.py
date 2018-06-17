@@ -4,6 +4,8 @@ from apis import hello_world, todo, version, timecapsule_api
 
 app = Flask(__name__)
 api = Api(app)
+app.config['JSON_AS_ASCII'] = False
+
 api_url = '/api'
 timecapsule_url = api_url + '/timecapsule'
 api.add_resource(hello_world.HelloWorld, '/hello')
