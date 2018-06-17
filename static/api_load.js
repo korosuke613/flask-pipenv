@@ -11,6 +11,7 @@ $(function () {
         $.ajax({
 
             url: 'http://ec2-13-113-63-24.ap-northeast-1.compute.amazonaws.com:5000/api/timecapsule/user',
+            //url: 'http://127.0.0.1:5000/api/timecapsule/user',
 
             type: 'post', // getかpostを指定(デフォルトは前者)
 
@@ -53,7 +54,7 @@ $(function () {
 
                 $('#result').val('失敗');
 
-                $('#detail').val(response.data);
+                $('#detail').val(response.message);
 
             });
 
